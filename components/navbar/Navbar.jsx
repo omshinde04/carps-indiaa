@@ -113,9 +113,9 @@ export default function Navbar() {
                         </div>
 
 
-                        <Link href="/models" className="flex items-center gap-1 hover:text-primary">
-                            <BookOpen size={18} />
-                            Models
+                        <Link href="/success" className="flex items-center gap-1 hover:text-primary">
+                            <Trophy size={18} />
+                            Success
                         </Link>
 
                         <Link href="/trainers" className="flex items-center gap-1 hover:text-primary">
@@ -180,12 +180,12 @@ export default function Navbar() {
 
                         <div className="flex flex-col gap-4 px-6 py-6 text-lg">
 
-                            <Link href="/" className="flex items-center gap-2">
+                            <Link href="/" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
                                 <Home size={18} />
                                 Home
                             </Link>
 
-                            <Link href="/about" className="flex items-center gap-2">
+                            <Link href="/about" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
                                 <User size={18} />
                                 About
                             </Link>
@@ -218,6 +218,7 @@ export default function Navbar() {
                                             <Link
                                                 key={i}
                                                 href={item.href}
+                                                onClick={() => setMenuOpen(false)}
                                                 className="flex items-center gap-2 text-gray-600"
                                             >
                                                 <BookOpen size={16} />
@@ -232,28 +233,24 @@ export default function Navbar() {
                             </AnimatePresence>
 
 
-                            <Link href="/models" className="flex items-center gap-2">
-                                <BookOpen size={18} />
-                                Models
-                            </Link>
-
-                            <Link href="/trainers" className="flex items-center gap-2">
-                                <Users size={18} />
-                                Trainers
-                            </Link>
-
-                            <Link href="/gallery" className="flex items-center gap-2">
-                                <ImageIcon size={18} />
-                                Gallery
-                            </Link>
-
-                            <Link href="/success" className="flex items-center gap-2">
+                            <Link href="/success" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
                                 <Trophy size={18} />
                                 Success
                             </Link>
 
+                            <Link href="/trainers" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
+                                <Users size={18} />
+                                Trainers
+                            </Link>
+
+                            <Link href="/gallery" className="flex items-center gap-2" onClick={() => setMenuOpen(false)}>
+                                <ImageIcon size={18} />
+                                Gallery
+                            </Link>
+
                             <Link
                                 href="/contact"
+                                onClick={() => setMenuOpen(false)}
                                 className="flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-full mt-4"
                             >
                                 <Phone size={18} />
