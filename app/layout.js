@@ -3,9 +3,6 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/global/WhatsAppFloat";
 
-// 🔥 IMPORT AI AGENT
-import AIWidget from "@/components/agent/AIWidget";
-
 export const metadata = {
   metadataBase: new URL("https://www.carpsindia.com"),
 
@@ -79,9 +76,6 @@ export default function RootLayout({ children }) {
         {children}
 
         <WhatsAppFloat />
-
-        {/* 🔥 AI ASSISTANT (GLOBAL FLOAT) */}
-        <AIWidget />
 
         <Footer />
 

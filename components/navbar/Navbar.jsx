@@ -25,8 +25,8 @@ export default function Navbar() {
     const [mobileProgramOpen, setMobileProgramOpen] = useState(false);
 
     const programList = [
-        { name: "Corporate Training", href: "/programs" },
-        { name: "Skill Development", href: "#" },
+        { name: "Courses", href: "/courses" },
+        { name: "Skill Development", href: "/skill-development" },
     ];
 
     return (
