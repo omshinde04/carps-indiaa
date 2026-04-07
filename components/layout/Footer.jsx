@@ -91,8 +91,8 @@ export default function Footer() {
 
                             <li><Link href="/">Home</Link></li>
                             <li><Link href="/about">About CARPS</Link></li>
-                            <li><Link href="/programs">Programs</Link></li>
-                            <li><Link href="/models">Models</Link></li>
+                            <li><Link href="/courses">Programs</Link></li>
+                            <li><Link href="/skill-development">Skill Development</Link></li>
                             <li><Link href="/trainers">Our Trainers</Link></li>
                             <li><Link href="/gallery">Gallery</Link></li>
                             <li><Link href="/success">Success Stories</Link></li>

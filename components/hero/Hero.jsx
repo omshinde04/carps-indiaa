@@ -125,7 +125,7 @@ export default function Hero() {
                         className="flex flex-wrap gap-4 mt-10"
                     >
                         <Link
-                            href="/programs"
+                            href="/courses"
                             className="bg-primary px-7 py-3 rounded-full font-semibold text-white shadow-lg hover:scale-105 transition"
                         >
                             Explore Programs

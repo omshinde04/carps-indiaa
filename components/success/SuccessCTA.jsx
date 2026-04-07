@@ -51,7 +51,7 @@ export default function SuccessCTA() {
                     </Link>
 
                     <Link
-                        href="/programs"
+                        href="/courses"
                         className="border border-gray-300 text-sm sm:text-base px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
                     >
                         View Programs

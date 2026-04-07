@@ -76,9 +76,12 @@ export default function HeroSection() {
                             Get Started <FaArrowRight />
                         </Link>
 
-                        <button className="flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">
-                            <FaPlay /> Watch Demo
-                        </button>
+                        <Link
+                            href="/courses"
+                            className="flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-full shadow-lg hover:scale-105 transition"
+                        >
+                            Explore Programs <FaArrowRight />
+                        </Link>
                     </motion.div>
 
                     {/* Stats */}

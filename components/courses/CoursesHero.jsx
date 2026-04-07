@@ -78,9 +78,12 @@ export default function CoursesHero() {
                         Get Started <FaArrowRight />
                     </Link>
 
-                    <button className="flex items-center justify-center gap-2 px-5 py-3 border border-white/40 rounded-full hover:bg-white hover:text-black transition text-sm">
-                        <FaPlay /> Watch Overview
-                    </button>
+                    <Link
+                        href="/skill-development"
+                        className="flex items-center justify-center gap-2 px-5 py-3 bg-primary text-white rounded-full shadow hover:scale-105 transition text-sm"
+                    >
+                        Skill Development <FaArrowRight />
+                    </Link>
                 </motion.div>
 
             </div>
