@@ -45,6 +45,7 @@ export const metadata = {
     },
   },
 
+  // 🔥 OPEN GRAPH (SOCIAL PREVIEW FIXED)
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -55,22 +56,24 @@ export const metadata = {
       "Empowering students and professionals with industry-relevant skills, leadership training, and career-focused programs.",
     images: [
       {
-        url: "https://www.carpsindia.com/logo.jpeg",
+        url: "https://www.carpsindia.com/og-image-v2.jpg", // ✅ FIXED IMAGE
         width: 1200,
         height: 630,
-        alt: "CARPS India Corporate Training",
+        alt: "CARPS India Corporate Training Programs",
       },
     ],
   },
 
+  // 🔥 TWITTER FIXED
   twitter: {
     card: "summary_large_image",
     title: "CARPS India | Corporate Training & Skill Development",
     description:
       "Industry-focused training programs for communication, leadership, and digital skills.",
-    images: ["https://www.carpsindia.com/logo.jpeg"],
+    images: ["https://www.carpsindia.com/og-image-v2.jpg"], // ✅ FIXED
   },
 
+  // 🔥 ICONS
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -82,6 +85,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+
         {/* 🔥 ORGANIZATION SCHEMA */}
         <script
           type="application/ld+json"
@@ -91,7 +95,7 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "CARPS India",
               url: "https://www.carpsindia.com",
-              logo: "https://www.carpsindia.com/logo.jpeg",
+              logo: "https://www.carpsindia.com/logo.jpeg?v=2", // ✅ cache fix
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+91 9876543210",
@@ -108,7 +112,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* 🔥 EDUCATIONAL ORGANIZATION SCHEMA */}
+        {/* 🔥 EDUCATIONAL ORGANIZATION */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -117,7 +121,7 @@ export default function RootLayout({ children }) {
               "@type": "EducationalOrganization",
               name: "CARPS India",
               url: "https://www.carpsindia.com",
-              logo: "https://www.carpsindia.com/logo.jpeg",
+              logo: "https://www.carpsindia.com/logo.jpeg?v=2",
               email: "info@carpsindia.com",
               telephone: "+91 9876543210",
               address: {
@@ -128,7 +132,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* 🔥 WEBSITE SCHEMA (VERY POWERFUL FOR SEO) */}
+        {/* 🔥 WEBSITE SCHEMA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -146,6 +150,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+
       </head>
 
       <body>
