@@ -7,30 +7,42 @@ export const metadata = {
   metadataBase: new URL("https://www.carpsindia.com"),
 
   title: {
-    default: "CARPS India | Corporate Training & Professional Development",
+    default: "CARPS India | Corporate Training & Skill Development Institute",
     template: "%s | CARPS India",
   },
 
   description:
-    "CARPS India provides corporate training, leadership development, and professional skill programs designed to build future-ready professionals and high-performing organizations.",
+    "CARPS India is a leading corporate training and skill development institute offering communication skills, leadership training, digital skills, and career-focused programs for students and professionals.",
 
   keywords: [
     "CARPS India",
     "Corporate Training India",
-    "Professional Development Programs",
-    "Leadership Training",
-    "Workplace Communication Training",
-    "Business Skills Training",
-    "Corporate Workshops India",
+    "Skill Development Institute",
+    "Communication Skills Training",
+    "Leadership Training India",
+    "Digital Skills Training",
+    "Student Development Programs",
+    "Professional Training Institute",
   ],
 
-  authors: [{ name: "CARPS India" }],
-
+  authors: [{ name: "CARPS India", url: "https://www.carpsindia.com" }],
+  creator: "CARPS India",
   publisher: "CARPS India",
+
+  alternates: {
+    canonical: "https://www.carpsindia.com",
+  },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 
   openGraph: {
@@ -38,25 +50,25 @@ export const metadata = {
     locale: "en_IN",
     url: "https://www.carpsindia.com",
     siteName: "CARPS India",
-    title: "CARPS India | Corporate Training & Professional Development",
+    title: "CARPS India | Corporate Training & Skill Development",
     description:
-      "Industry-focused corporate training programs designed to build leadership, communication, and workplace skills.",
+      "Empowering students and professionals with industry-relevant skills, leadership training, and career-focused programs.",
     images: [
       {
-        url: "https://www.carpsindia.com/og-image.jpg",
+        url: "https://www.carpsindia.com/logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "CARPS India Corporate Training",
+        alt: "CARPS India Training Institute",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "CARPS India | Corporate Training",
+    title: "CARPS India | Skill Development Institute",
     description:
-      "Corporate training and professional development programs designed for future-ready professionals.",
-    images: ["https://www.carpsindia.com/og-image.jpg"],
+      "Industry-focused training programs for communication, leadership, and digital skills.",
+    images: ["https://www.carpsindia.com/logo.jpeg"],
   },
 
   icons: {
@@ -69,16 +81,59 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* 🔥 Structured Data (VERY IMPORTANT FOR SEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "CARPS India",
+              url: "https://www.carpsindia.com",
+              logo: "https://www.carpsindia.com/logo.jpeg",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91 9876543210",
+                contactType: "customer support",
+                areaServed: "IN",
+                availableLanguage: ["English", "Hindi"],
+              },
+              sameAs: [
+                "https://www.instagram.com/",
+                "https://www.linkedin.com/",
+                "https://www.facebook.com/",
+              ],
+            }),
+          }}
+        />
+
+        {/* 🔥 Local Business Schema (EXTRA BOOST) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "CARPS India",
+              url: "https://www.carpsindia.com",
+              logo: "https://www.carpsindia.com/logo.jpeg",
+              email: "info@carpsindia.com",
+              telephone: "+91 9876543210",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IN",
+              },
+            }),
+          }}
+        />
+      </head>
+
       <body>
-
         <Navbar />
-
         {children}
-
         <WhatsAppFloat />
-
         <Footer />
-
       </body>
     </html>
   );
