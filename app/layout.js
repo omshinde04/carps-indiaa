@@ -7,22 +7,22 @@ export const metadata = {
   metadataBase: new URL("https://www.carpsindia.com"),
 
   title: {
-    default: "CARPS India | Corporate Training & Skill Development Institute",
+    default: "CARPS India | Corporate Training & Skill Development",
     template: "%s | CARPS India",
   },
 
   description:
-    "CARPS India is a leading corporate training and skill development institute offering communication skills, leadership training, digital skills, and career-focused programs for students and professionals.",
+    "CARPS India offers corporate training, leadership development, communication skills, and digital skill programs designed to build future-ready professionals and high-performing individuals.",
 
   keywords: [
     "CARPS India",
     "Corporate Training India",
-    "Skill Development Institute",
+    "Skill Development Programs",
     "Communication Skills Training",
     "Leadership Training India",
     "Digital Skills Training",
     "Student Development Programs",
-    "Professional Training Institute",
+    "Professional Training",
   ],
 
   authors: [{ name: "CARPS India", url: "https://www.carpsindia.com" }],
@@ -58,14 +58,14 @@ export const metadata = {
         url: "https://www.carpsindia.com/logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "CARPS India Training Institute",
+        alt: "CARPS India Corporate Training",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "CARPS India | Skill Development Institute",
+    title: "CARPS India | Corporate Training & Skill Development",
     description:
       "Industry-focused training programs for communication, leadership, and digital skills.",
     images: ["https://www.carpsindia.com/logo.jpeg"],
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* 🔥 Structured Data (VERY IMPORTANT FOR SEO) */}
+        {/* 🔥 ORGANIZATION SCHEMA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* 🔥 Local Business Schema (EXTRA BOOST) */}
+        {/* 🔥 EDUCATIONAL ORGANIZATION SCHEMA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -123,6 +123,25 @@ export default function RootLayout({ children }) {
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "IN",
+              },
+            }),
+          }}
+        />
+
+        {/* 🔥 WEBSITE SCHEMA (VERY POWERFUL FOR SEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "CARPS India",
+              url: "https://www.carpsindia.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target:
+                  "https://www.carpsindia.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string",
               },
             }),
           }}
